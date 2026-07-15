@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int rows = 5; // Total number of rows for the pattern
+
+    // Outer loop handles the number of rows
+    for (int i = rows; i >= 1; i--) {
+        
+        // Inner loop 1: Prints the leading spaces for center alignment
+        for (int space = 0; space < rows - i; space++) {
+            cout << "  ";
+        }
+
+        // Inner loop 2: Prints the increasing numbers
+        for (int j = 1; j <= i; j++) {
+            cout << j << " ";
+        }
+
+        // Inner loop 3: Prints the decreasing numbers
+        for (int j = i - 1; j >= 1; j--) {
+            cout << j << " ";
+        }
+
+        // Moves the cursor to the next line after completing a row
+        cout << endl;
+    }
+
+    return 0;
+}
